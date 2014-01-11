@@ -179,6 +179,14 @@ inline Vector operator*(float f, const Vector& v) {
 	return v*f;
 }
 
+inline Vector operator-(const Normal& n, const Vector& v) {
+	return Vector(n.x - v.x, n.y - v.y, n.z - v.z);
+}
+
+inline Vector operator-(const Vector& n, const Normal& v) {
+	return Vector(n.x - v.x, n.y - v.y, n.z - v.z);
+}
+
 inline float Dot(const Vector& v1, const Vector& v2) {
 	return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
 }

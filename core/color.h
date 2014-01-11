@@ -24,3 +24,7 @@ public:
 	Color& operator/=(float f);
 	bool operator==(const Color& c) const;
 };
+
+inline Color operator*(float f, const Color& c) {
+	return Color(f * c.r, f * c.g, f * c.b);
+}

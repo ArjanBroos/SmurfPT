@@ -6,6 +6,7 @@
 
 class Sphere : public Shape {
 public:
+	Sphere() { this->color = Color(); }
 	Sphere(Color color) { this->color = color; }
 	Point center;
 	float radius;
